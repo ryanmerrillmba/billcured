@@ -312,6 +312,16 @@
   font-weight: var(--font-weight-semibold);
 }
 
+.upsell-image {
+  text-align: center;
+  margin: var(--space-3) 0;
+}
+
+.upsell-image img {
+  max-width: 120px;
+  height: auto;
+}
+
 .upsell-description {
   font-size: var(--font-size-sm);
   color: var(--color-text-light);

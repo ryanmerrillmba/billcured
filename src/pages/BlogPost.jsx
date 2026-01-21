@@ -30,6 +30,14 @@ function BlogPost() {
           </div>
         </header>
 
+        {post.image && (
+          <div className="post-featured-image">
+            <div className="container">
+              <img src={post.image} alt={post.title} />
+            </div>
+          </div>
+        )}
+
         <div className="post-content">
           <div className="container">
             <div className="content-wrapper">
@@ -52,7 +60,7 @@ function BlogPost() {
                   action plans.
                 </p>
                 <Link to="/product" className="btn btn-primary">
-                  Get the Blueprint - $50
+                  Get the Blueprint - $49.99
                 </Link>
               </div>
             </div>
@@ -82,7 +90,7 @@ function BlogPost() {
         variant="dark"
         headline="Stop Struggling with Medical Bills"
         subheadline="Get the proven system to negotiate your bills down by 30-70%."
-        ctaText="Get the Blueprint - $50"
+        ctaText="Get the Blueprint - $49.99"
       />
     </>
   )

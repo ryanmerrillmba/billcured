@@ -39,6 +39,9 @@ function Home() {
               <span className="stat-label">Average savings</span>
             </div>
           </div>
+          <div className="trust-badges">
+            <img src="/images/trust_badges.png" alt="60-Day Money Back Guarantee | Secure Checkout | Instant Download" />
+          </div>
         </div>
       </section>
 

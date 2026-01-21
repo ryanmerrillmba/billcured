@@ -7,6 +7,7 @@
     "category": "Negotiation",
     "keyword": "how to negotiate medical bills",
     "contentType": "Ultimate Guide",
+    "image": "/images/blog_negotiation.jpg",
     "content": [
       {"type": "paragraph", "text": "If you're staring at a medical bill that seems impossibly high, you're not alone. Medical debt affects millions of Americans, but here's what most people don't know: medical bills are almost always negotiable."},
       {"type": "heading", "text": "Why Medical Bills Can Be Negotiated"},
@@ -33,6 +34,7 @@
     "category": "FAQ",
     "keyword": "can you negotiate medical bills",
     "contentType": "FAQ / Blog",
+    "image": "/images/blog_can_you_negotiate.jpg",
     "content": [
       {"type": "paragraph", "text": "One of the most common questions we hear is: 'Can you actually negotiate medical bills?' The short answer is absolutely yes. In fact, healthcare providers expect it."},
       {"type": "heading", "text": "Why Hospitals Allow Negotiation"},
@@ -53,6 +55,7 @@
     "category": "Templates",
     "keyword": "medical bill dispute",
     "contentType": "Blog Post",
+    "image": "/images/blog_dispute_letter.jpg",
     "content": [
       {"type": "paragraph", "text": "A well-written dispute letter can be your most powerful tool when fighting medical bills. It creates a paper trail, forces the provider to respond formally, and often leads to significant reductions."},
       {"type": "heading", "text": "When to Send a Dispute Letter"},
@@ -73,6 +76,7 @@
     "category": "Financial Assistance",
     "keyword": "hospital bill forgiveness",
     "contentType": "Resource Guide",
+    "image": "/images/blog_forgiveness.jpg",
     "content": [
       {"type": "paragraph", "text": "Most people don't know this, but hospitals are often required to offer financial assistance programs that can forgive part or all of your medical bills. These charity care programs help millions of patients each year, yet many never apply simply because they don't know they exist."},
       {"type": "heading", "text": "What is Hospital Charity Care?"},
@@ -95,6 +99,7 @@
     "category": "Medical Debt",
     "keyword": "medical debt",
     "contentType": "Pillar Content",
+    "image": "/images/blog_debt.jpg",
     "content": [
       {"type": "paragraph", "text": "Medical debt is the leading cause of bankruptcy in America, affecting over 100 million people. But having medical debt doesn't mean you're out of options. Understanding how the system works is the first step to taking control."},
       {"type": "heading", "text": "The Medical Debt Crisis in America"},

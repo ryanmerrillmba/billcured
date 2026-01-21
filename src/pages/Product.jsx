@@ -185,6 +185,9 @@ function Product() {
                       <span className="upsell-price">+${upsellPrice}</span>
                     </div>
                   </label>
+                  <div className="upsell-image">
+                    <img src="/images/escalation_mockup.png" alt="Escalation Playbook" />
+                  </div>
                   <p className="upsell-description">
                     Advanced scripts for when they say &ldquo;no.&rdquo; Supervisor escalation tactics,
                     patient advocate strategies, and regulatory complaint templates.

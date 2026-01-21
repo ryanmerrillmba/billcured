@@ -1,26 +1,57 @@
 .hero {
-  padding: var(--space-16) 0;
-  background: linear-gradient(180deg, var(--color-primary-light) 0%, var(--color-bg) 100%);
+  padding: var(--space-12) 0;
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-bg) 50%, var(--color-bg-white) 100%);
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
   .hero {
-    padding: var(--space-24) 0;
+    padding: var(--space-16) 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding: var(--space-20) 0;
+  }
+}
+
+.hero-grid {
+  display: grid;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-12);
   }
 }
 
 .hero-content {
-  max-width: 720px;
   text-align: center;
-  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .hero-content {
+    text-align: left;
+  }
 }
 
 .hero-headline {
-  font-size: var(--font-size-4xl);
+  font-size: var(--font-size-3xl);
   margin-bottom: var(--space-4);
+  line-height: 1.2;
 }
 
 @media (min-width: 768px) {
+  .hero-headline {
+    font-size: var(--font-size-4xl);
+  }
+}
+
+@media (min-width: 1024px) {
   .hero-headline {
     font-size: var(--font-size-5xl);
   }
@@ -29,17 +60,25 @@
 .hero-subheadline {
   font-size: var(--font-size-lg);
   color: var(--color-text-light);
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-6);
+  line-height: var(--line-height-relaxed);
 }
 
 @media (min-width: 768px) {
   .hero-subheadline {
     font-size: var(--font-size-xl);
+    margin-bottom: var(--space-8);
   }
 }
 
 .hero-cta {
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .hero-cta {
+    margin-bottom: var(--space-8);
+  }
 }
 
 .hero-benefits {
@@ -47,7 +86,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: var(--space-4) var(--space-6);
+  gap: var(--space-3) var(--space-5);
+}
+
+@media (min-width: 1024px) {
+  .hero-benefits {
+    justify-content: flex-start;
+  }
 }
 
 .hero-benefits li {
@@ -61,4 +106,30 @@
 .benefit-check {
   color: var(--color-success);
   font-weight: var(--font-weight-bold);
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  order: -1;
+}
+
+@media (min-width: 1024px) {
+  .hero-image {
+    order: 1;
+  }
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+@media (min-width: 1024px) {
+  .hero-image img {
+    max-width: 100%;
+  }
 }

@@ -6,11 +6,16 @@ function About() {
     <>
       <section className="section about-hero">
         <div className="container">
-          <div className="about-hero-content">
-            <h1>We&apos;ve Been Where You Are</h1>
-            <p className="about-lead">
-              BillCured started from a personal crisis that became a mission to help others.
-            </p>
+          <div className="about-hero-grid">
+            <div className="about-hero-content">
+              <h1>We&apos;ve Been Where You Are</h1>
+              <p className="about-lead">
+                BillCured started from a personal crisis that became a mission to help others.
+              </p>
+            </div>
+            <div className="about-hero-image">
+              <img src="/images/about_hero.jpg" alt="Helping people with medical bills" />
+            </div>
           </div>
         </div>
       </section>
@@ -93,7 +98,7 @@ function About() {
       <CTASection
         headline="Ready to Fight Your Medical Bills?"
         subheadline="Get the same tools and strategies that have helped thousands save money."
-        ctaText="Get the Blueprint - $50"
+        ctaText="Get the Blueprint - $49.99"
       />
     </>
   )
