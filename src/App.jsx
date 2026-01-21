@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Header, Footer } from './components'
-import { Home, About, FAQ, Resources, Product, Privacy, Terms } from './pages'
+import { Home, About, FAQ, Resources, Product, Privacy, Terms, Blog, BlogPost } from './pages'
 
 function App() {
   return (
@@ -15,6 +15,8 @@ function App() {
           <Route path="/product" element={<Product />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
         </Routes>
       </main>
       <Footer />
