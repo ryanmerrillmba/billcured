@@ -1,0 +1,26 @@
+﻿#,Keyword,Monthly Volume,Competition,CPC ($),Keyword Difficulty,Search Intent,Buying Intent,Content Type,Priority
+1,negotiate medical bill,2400,Low,3.17,38,Informational,#1 Purchase,Product Page / Blog,HIGH
+2,how to negotiate medical bills,1000,Medium,3.14,42,Informational,#1 Purchase,Ultimate Guide Blog,HIGH
+3,medical bill negotiation services,210,Low,3.51,35,Commercial,#1 Purchase,Product Page,HIGH
+4,help with hospital bill,480,Medium,4.39,34,Informational/Nav,#1 Purchase,Landing Page,HIGH
+5,hospital bill help,480,Medium,4.39,65,Navigational,#1 Purchase,Homepage,HIGH
+6,medical bill dispute,880,Low,2.79,40,Informational,#1 Purchase,Blog Post,HIGH
+7,can you negotiate medical bills,480,Low,2.02,36,Informational,#1 Purchase,FAQ / Blog,HIGH
+8,fight medical bill,50,High,6.49,45,Informational,#1 Purchase,Blog Post,MEDIUM
+9,hospital bill forgiveness,720,Medium,3.6,48,Informational,#1 Purchase,Resource Guide,HIGH
+10,reduce hospital bill,50,Medium,2.81,42,Commercial,#1 Purchase,Product Page,MEDIUM
+11,medical debt,22200,Low,8.79,55,Navigational,#2 Lead Magnet,Pillar Content,HIGH
+12,itemized hospital bill,880,Low,4.79,38,Informational,#2 Lead Magnet,How-To Guide,HIGH
+13,medical bill payment plan,1900,Low,9.45,42,Commercial,#2 Lead Magnet,Resource Page,HIGH
+14,hospital charity care,720,Low,5.72,40,Informational,#2 Lead Magnet,Guide Blog,HIGH
+15,financial assistance for medical bills,1300,Low,5.25,44,Informational,#2 Lead Magnet,Resource Hub,HIGH
+16,grants to help pay medical bills,1000,Medium,4.05,46,Commercial,#2 Lead Magnet,Resource List,HIGH
+17,medical debt forgiveness,1600,Medium,5.47,50,Informational,#2 Lead Magnet,Explainer Blog,HIGH
+18,surprise medical bill,480,Low,13.67,52,Commercial,#2 Lead Magnet,Know Your Rights,MEDIUM
+19,emergency room bill,320,Medium,8.5,48,Commercial,#2 Lead Magnet,Scenario Guide,MEDIUM
+20,insurance appeal letter,260,Low,2.5,35,Informational,#2 Lead Magnet,Template Blog,HIGH
+,,,,,,,,,
+,,,,,,,,,
+LEGEND:,,,,,,,,,
+Green = #1 Purchase Intent (Product Sale),,,,,,,,,
+Orange = #2 Lead Magnet Intent (Email Capture),,,,,,,,,
