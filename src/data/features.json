@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Word-for-Word Scripts",
+    "description": "Never wonder what to say. Get exact phrases that work for phone calls with billing departments, insurance companies, and collection agencies.",
+    "icon": "script"
+  },
+  {
+    "title": "Letter Templates",
+    "description": "Professional dispute letters and financial assistance applications ready to customize and send. Just fill in your details.",
+    "icon": "letter"
+  },
+  {
+    "title": "Step-by-Step Action Plan",
+    "description": "A clear roadmap from receiving your bill to successful negotiation. Know exactly what to do at each stage.",
+    "icon": "checklist"
+  },
+  {
+    "title": "Itemized Bill Guide",
+    "description": "Learn how to request and analyze itemized bills to find errors, duplicate charges, and inflated prices.",
+    "icon": "magnify"
+  },
+  {
+    "title": "Financial Assistance Secrets",
+    "description": "Discover hospital charity care programs and income-based discounts that most people don't know exist.",
+    "icon": "money"
+  },
+  {
+    "title": "Collections Defense",
+    "description": "Strategies for dealing with medical debt in collections, including dispute tactics and negotiation approaches.",
+    "icon": "shield"
+  }
+]

@@ -1,0 +1,49 @@
+.faq-hero {
+  background: linear-gradient(180deg, var(--color-primary-light) 0%, var(--color-bg) 100%);
+  padding: var(--space-16) 0;
+}
+
+.faq-hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.faq-hero h1 {
+  margin-bottom: var(--space-4);
+}
+
+.faq-lead {
+  font-size: var(--font-size-xl);
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+/* FAQ Main Section */
+.faq-main {
+  background-color: var(--color-bg-white);
+}
+
+/* Contact Section */
+.faq-contact {
+  background-color: var(--color-bg);
+}
+
+.contact-box {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: var(--space-8);
+  background-color: var(--color-bg-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.contact-box h2 {
+  margin-bottom: var(--space-4);
+}
+
+.contact-box p {
+  color: var(--color-text-light);
+  margin-bottom: var(--space-6);
+}

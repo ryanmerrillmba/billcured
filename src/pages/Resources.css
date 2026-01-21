@@ -1,0 +1,121 @@
+.resources-hero {
+  background: linear-gradient(180deg, var(--color-primary-light) 0%, var(--color-bg) 100%);
+  padding: var(--space-16) 0;
+}
+
+.resources-hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.resources-hero h1 {
+  margin-bottom: var(--space-4);
+}
+
+.resources-lead {
+  font-size: var(--font-size-xl);
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+/* Resources Main Section */
+.resources-main {
+  background-color: var(--color-bg-white);
+}
+
+.resources-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.resource-category h2 {
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-2);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.resource-list {
+  display: grid;
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .resource-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .resource-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.resource-card {
+  display: block;
+  padding: var(--space-5);
+  background-color: var(--color-bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition-normal);
+}
+
+.resource-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.resource-card h3 {
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+  transition: color var(--transition-fast);
+}
+
+.resource-card:hover h3 {
+  color: var(--color-primary);
+}
+
+.resource-card p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  margin-bottom: var(--space-3);
+  line-height: var(--line-height-relaxed);
+}
+
+.resource-link {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary);
+}
+
+/* Internal CTA Box */
+.resources-cta-box {
+  background-color: var(--color-bg);
+}
+
+.internal-cta {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  padding: var(--space-10);
+  background-color: var(--color-bg-white);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-primary);
+}
+
+.internal-cta h2 {
+  margin-bottom: var(--space-4);
+}
+
+.internal-cta p {
+  color: var(--color-text-light);
+  margin-bottom: var(--space-6);
+  font-size: var(--font-size-lg);
+}

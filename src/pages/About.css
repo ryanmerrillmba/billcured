@@ -1,0 +1,132 @@
+.about-hero {
+  background: linear-gradient(180deg, var(--color-primary-light) 0%, var(--color-bg) 100%);
+  padding: var(--space-16) 0;
+}
+
+.about-hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-hero h1 {
+  margin-bottom: var(--space-4);
+}
+
+.about-lead {
+  font-size: var(--font-size-xl);
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+/* Story Section */
+.about-story {
+  background-color: var(--color-bg-white);
+}
+
+.story-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.story-content h2 {
+  margin-bottom: var(--space-6);
+}
+
+.story-content p {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Mission Section */
+.about-mission {
+  background-color: var(--color-bg);
+}
+
+.mission-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mission-content h2 {
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.mission-statement {
+  font-size: var(--font-size-xl);
+  text-align: center;
+  color: var(--color-text);
+  max-width: 700px;
+  margin: 0 auto var(--space-12);
+}
+
+.mission-values {
+  display: grid;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .mission-values {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.value {
+  background-color: var(--color-bg-white);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.value h3 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+}
+
+.value p {
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+/* Impact Section */
+.about-impact {
+  background-color: var(--color-bg-white);
+}
+
+.impact-stats {
+  display: grid;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .impact-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .impact-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.impact-stat {
+  text-align: center;
+  padding: var(--space-6);
+  background-color: var(--color-primary-light);
+  border-radius: var(--radius-lg);
+}
+
+.impact-number {
+  display: block;
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+}
+
+.impact-label {
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+}
