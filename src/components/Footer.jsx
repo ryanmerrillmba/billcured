@@ -9,7 +9,7 @@ function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <span className="footer-logo">BillCured</span>
+            <img src="/images/logo.png" alt="BillCured" className="footer-logo-img" />
             <p className="footer-tagline">
               Helping you fight back against unfair medical bills.
             </p>

@@ -147,6 +147,9 @@ function Product() {
             {/* Right Column - Purchase Box */}
             <div className="product-sidebar">
               <div className="purchase-box">
+                <div className="product-mockup">
+                  <img src="/images/blueprint_mockup.png" alt="Bill Cured Blueprint" />
+                </div>
                 <div className="purchase-header">
                   <h3>Bill Cured Blueprint</h3>
                   <div className="price">

@@ -3,30 +3,35 @@
     "quote": "I was staring at a $23,000 ER bill after my daughter's accident. Using the scripts in this guide, I got it reduced to $6,900. I still can't believe it worked!",
     "name": "Sarah M.",
     "location": "Austin, TX",
-    "savings": "$16,100"
+    "savings": "$16,100",
+    "image": "/images/sarah_m.jpg"
   },
   {
     "quote": "The hospital told me there was nothing they could do. After reading the Blueprint, I called back and spoke to a supervisor using the escalation script. They reduced my bill by 55%.",
     "name": "Michael R.",
     "location": "Denver, CO",
-    "savings": "$8,400"
+    "savings": "$8,400",
+    "image": "/images/michael_r.jpg"
   },
   {
     "quote": "I've been dealing with chronic illness for years and the medical bills were crushing us. The financial assistance section alone was worth 10x the price. We qualified for programs I never knew existed.",
     "name": "Jennifer L.",
     "location": "Chicago, IL",
-    "savings": "$12,000+"
+    "savings": "$12,000+",
+    "image": "/images/jennifer_l.jpg"
   },
   {
     "quote": "My bill was already in collections and I thought I was stuck. The Blueprint showed me how to negotiate with the collection agency. Settled for 40 cents on the dollar.",
     "name": "David K.",
     "location": "Phoenix, AZ",
-    "savings": "$4,200"
+    "savings": "$4,200",
+    "image": "/images/david_k.jpg"
   },
   {
     "quote": "As a single mom, I couldn't afford the $15,000 bill from my son's surgery. The step-by-step guide made it so easy to apply for charity care. Our entire bill was forgiven!",
     "name": "Amanda T.",
     "location": "Atlanta, GA",
-    "savings": "$15,000"
+    "savings": "$15,000",
+    "image": "/images/amanda_t.jpg"
   }
 ]

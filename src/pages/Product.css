@@ -176,6 +176,17 @@
   top: calc(70px + var(--space-4));
 }
 
+.product-mockup {
+  text-align: center;
+  margin-bottom: var(--space-4);
+}
+
+.product-mockup img {
+  max-width: 100%;
+  height: auto;
+  max-height: 200px;
+}
+
 .purchase-header {
   text-align: center;
   padding-bottom: var(--space-4);

@@ -28,6 +28,11 @@
   color: var(--color-primary);
 }
 
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
 .nav {
   display: none;
   flex-direction: column;

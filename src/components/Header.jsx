@@ -17,7 +17,7 @@ function Header() {
     <header className="header">
       <div className="container header-container">
         <Link to="/" className="logo" onClick={closeMobileMenu}>
-          <span className="logo-text">BillCured</span>
+          <img src="/images/logo.png" alt="BillCured" className="logo-img" />
         </Link>
 
         <button

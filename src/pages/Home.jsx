@@ -13,7 +13,7 @@ function Home() {
       <Hero
         headline="Cut Your Medical Bills by 30-70% in a Single Phone Call"
         subheadline="Get the exact scripts, templates, and strategies used to negotiate thousands of dollars off hospital bills. No experience needed."
-        ctaText="Get the Blueprint - $50"
+        ctaText="Get the Blueprint - $49.99"
         ctaLink="/product"
         benefits={[
           'Word-for-word negotiation scripts',
@@ -114,7 +114,7 @@ function Home() {
         variant="dark"
         headline="Stop Overpaying for Medical Care"
         subheadline="Join thousands who have taken control of their medical bills."
-        ctaText="Get the Blueprint - $50"
+        ctaText="Get the Blueprint - $49.99"
       />
     </>
   )

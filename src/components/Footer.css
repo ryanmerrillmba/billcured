@@ -25,6 +25,12 @@
   color: var(--color-text-inverse);
 }
 
+.footer-logo-img {
+  height: 32px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
 .footer-tagline {
   color: var(--color-text-light);
   margin-top: var(--space-4);
