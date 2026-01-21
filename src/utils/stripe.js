@@ -1,8 +1,3 @@
-import { loadStripe } from '@stripe/stripe-js'
-
-// Stripe publishable key from environment variable
-const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || '')
-
 // Product price IDs from Stripe Dashboard
 // These should be created in Stripe and the IDs added to environment variables
 export const PRODUCTS = {
@@ -19,41 +14,31 @@ export const PRODUCTS = {
 }
 
 /**
- * Redirect to Stripe Checkout
+ * Create a Checkout Session and redirect to Stripe
  * @param {string[]} priceIds - Array of Stripe Price IDs to purchase
  * @returns {Promise<void>}
  */
 export async function redirectToCheckout(priceIds) {
-  const stripe = await stripePromise
-
-  if (!stripe) {
-    console.error('Stripe has not been initialized. Check your publishable key.')
-    alert('Payment system is not configured. Please try again later.')
-    return
-  }
-
-  // Build line items from price IDs
-  const lineItems = priceIds.map((priceId) => ({
-    price: priceId,
-    quantity: 1,
-  }))
-
   try {
-    const { error } = await stripe.redirectToCheckout({
-      lineItems,
-      mode: 'payment',
-      successUrl: `${window.location.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancelUrl: `${window.location.origin}/product`,
-    })
+    // Call our server-side function to create the checkout session
+    const response = await fetch('/api/create-checkout', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ priceIds }),
+    });
 
-    if (error) {
-      console.error('Stripe checkout error:', error)
-      alert('There was an error processing your payment. Please try again.')
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || 'Failed to create checkout session');
     }
+
+    // Redirect to Stripe Checkout
+    window.location.href = data.url;
   } catch (err) {
-    console.error('Checkout error:', err)
-    alert('There was an error processing your payment. Please try again.')
+    console.error('Checkout error:', err);
+    alert('There was an error processing your payment. Please try again.');
   }
 }
-
-export default stripePromise
