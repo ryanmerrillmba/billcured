@@ -1,0 +1,7 @@
+export { default as Header } from './Header'
+export { default as Footer } from './Footer'
+export { default as Hero } from './Hero'
+export { default as CTASection } from './CTASection'
+export { default as FAQAccordion } from './FAQAccordion'
+export { default as TestimonialCard } from './TestimonialCard'
+export { default as BlogCard } from './BlogCard'
