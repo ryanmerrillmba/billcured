@@ -29,14 +29,20 @@
 }
 
 .trust-badges {
-  margin-top: var(--space-6);
+  margin-top: var(--space-8);
   text-align: center;
 }
 
 .trust-badges img {
   max-width: 100%;
   height: auto;
-  max-height: 60px;
+  max-height: 120px;
+}
+
+@media (min-width: 768px) {
+  .trust-badges img {
+    max-height: 150px;
+  }
 }
 
 /* Problem Section */
