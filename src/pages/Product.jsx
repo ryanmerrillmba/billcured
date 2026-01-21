@@ -26,9 +26,9 @@ const productFaq = [
 function Product() {
   const [includeUpsell, setIncludeUpsell] = useState(false)
 
-  const basePrice = 50
-  const upsellPrice = 39
-  const totalPrice = includeUpsell ? basePrice + upsellPrice : basePrice
+  const basePrice = 49.99
+  const upsellPrice = 149.99
+  const totalPrice = includeUpsell ? (basePrice + upsellPrice).toFixed(2) : basePrice.toFixed(2)
 
   const handleCheckout = async () => {
     const priceIds = [PRODUCTS.BLUEPRINT.priceId]
@@ -228,7 +228,7 @@ function Product() {
           <div className="final-cta-content">
             <h2>Your Medical Bill Doesn&apos;t Have to Ruin Your Finances</h2>
             <p>
-              For less than the cost of dinner out, you can get the tools to potentially
+              For a small investment, you can get the tools to potentially
               save thousands on your medical bills. The average customer saves 47%.
             </p>
             <button className="btn btn-primary btn-large" onClick={handleCheckout}>

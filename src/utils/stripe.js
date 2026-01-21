@@ -4,12 +4,12 @@ export const PRODUCTS = {
   BLUEPRINT: {
     name: 'Bill Cured Blueprint',
     priceId: import.meta.env.VITE_STRIPE_BLUEPRINT_PRICE_ID || 'price_blueprint',
-    price: 50,
+    price: 49.99,
   },
   ESCALATION: {
     name: 'Escalation Playbook',
     priceId: import.meta.env.VITE_STRIPE_ESCALATION_PRICE_ID || 'price_escalation',
-    price: 39,
+    price: 149.99,
   },
 }
 
