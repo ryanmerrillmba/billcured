@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { FAQAccordion, TestimonialCard } from '../components'
+import { redirectToCheckout, PRODUCTS } from '../utils/stripe'
 import testimonialsData from '../data/testimonials.json'
 import './Product.css'
 
@@ -29,9 +30,12 @@ function Product() {
   const upsellPrice = 39
   const totalPrice = includeUpsell ? basePrice + upsellPrice : basePrice
 
-  const handleCheckout = () => {
-    // This will be replaced with Stripe checkout in Phase 8
-    alert('Checkout will be connected to Stripe in the next phase. Total: $' + totalPrice)
+  const handleCheckout = async () => {
+    const priceIds = [PRODUCTS.BLUEPRINT.priceId]
+    if (includeUpsell) {
+      priceIds.push(PRODUCTS.ESCALATION.priceId)
+    }
+    await redirectToCheckout(priceIds)
   }
 
   return (

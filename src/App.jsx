@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Header, Footer } from './components'
-import { Home, About, FAQ, Resources, Product, Privacy, Terms, Blog, BlogPost } from './pages'
+import { Home, About, FAQ, Resources, Product, Privacy, Terms, Blog, BlogPost, Success } from './pages'
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
           <Route path="/terms" element={<Terms />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/success" element={<Success />} />
         </Routes>
       </main>
       <Footer />
