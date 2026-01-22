@@ -29,19 +29,19 @@
 }
 
 .trust-badges {
-  margin-top: var(--space-8);
+  margin-top: var(--space-4);
   text-align: center;
 }
 
 .trust-badges img {
   max-width: 100%;
   height: auto;
-  max-height: 120px;
+  max-height: 240px;
 }
 
 @media (min-width: 768px) {
   .trust-badges img {
-    max-height: 150px;
+    max-height: 300px;
   }
 }
 
