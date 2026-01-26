@@ -133,3 +133,29 @@
     max-width: 100%;
   }
 }
+
+/* Hero Email Signup */
+.hero-email-signup {
+  max-width: 480px;
+}
+
+@media (min-width: 1024px) {
+  .hero-email-signup {
+    max-width: 100%;
+  }
+}
+
+.hero-secondary-cta {
+  margin-top: var(--space-4);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+}
+
+.hero-secondary-cta a {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.hero-secondary-cta a:hover {
+  text-decoration: underline;
+}

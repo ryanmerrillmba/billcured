@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import EmailSignup from './EmailSignup'
 import './Hero.css'
 
 function Hero({
@@ -7,7 +8,10 @@ function Hero({
   ctaText = 'Get the Blueprint',
   ctaLink = '/product',
   benefits = [],
-  image = '/images/hero.jpg'
+  image = '/images/hero.jpg',
+  showEmailSignup = false,
+  emailSignupSource = 'hero',
+  secondaryCta = null, // { text, link }
 }) {
   return (
     <section className="hero">
@@ -17,19 +21,36 @@ function Hero({
             <h1 className="hero-headline">{headline}</h1>
             <p className="hero-subheadline">{subheadline}</p>
 
-            <Link to={ctaLink} className="btn btn-primary btn-large hero-cta">
-              {ctaText}
-            </Link>
+            {showEmailSignup ? (
+              <div className="hero-email-signup">
+                <EmailSignup
+                  buttonText="Send My Free Guide"
+                  source={emailSignupSource}
+                  showBenefits={true}
+                />
+                {secondaryCta && (
+                  <p className="hero-secondary-cta">
+                    Or <Link to={secondaryCta.link}>{secondaryCta.text}</Link>
+                  </p>
+                )}
+              </div>
+            ) : (
+              <>
+                <Link to={ctaLink} className="btn btn-primary btn-large hero-cta">
+                  {ctaText}
+                </Link>
 
-            {benefits.length > 0 && (
-              <ul className="hero-benefits">
-                {benefits.map((benefit, index) => (
-                  <li key={index}>
-                    <span className="benefit-check">&#10003;</span>
-                    {benefit}
-                  </li>
-                ))}
-              </ul>
+                {benefits.length > 0 && (
+                  <ul className="hero-benefits">
+                    {benefits.map((benefit, index) => (
+                      <li key={index}>
+                        <span className="benefit-check">&#10003;</span>
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </>
             )}
           </div>
           <div className="hero-image">

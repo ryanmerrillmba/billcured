@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import './Header.css'
 
-function Header() {
+function Header({ minimal = false }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const toggleMobileMenu = () => {
@@ -11,6 +11,19 @@ function Header() {
 
   const closeMobileMenu = () => {
     setMobileMenuOpen(false)
+  }
+
+  // Minimal header for landing pages - just logo, no navigation
+  if (minimal) {
+    return (
+      <header className="header header--minimal">
+        <div className="container header-container">
+          <Link to="/" className="logo">
+            <img src="/images/logo.png?v=2" alt="BillCured" className="logo-img" />
+          </Link>
+        </div>
+      </header>
+    )
   }
 
   return (

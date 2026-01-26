@@ -1,5 +1,5 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
-import { CTASection } from '../components'
+import { CTASection, EmailSignup } from '../components'
 import blogPosts from '../data/blog-posts.json'
 import './BlogPost.css'
 
@@ -50,6 +50,16 @@ function BlogPost() {
                 }
                 return null
               })}
+
+              {/* Email Signup CTA */}
+              <div className="post-email-signup">
+                <EmailSignup
+                  headline="Get the Free Guide"
+                  subheadline="Discover the 'Billing Blind Spot' that could save you thousands on your next medical bill."
+                  buttonText="Send My Free Guide"
+                  source={`blog-${post.slug}`}
+                />
+              </div>
 
               {/* CTA Box */}
               <div className="post-cta-box">

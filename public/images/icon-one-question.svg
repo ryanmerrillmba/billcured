@@ -1,0 +1,12 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Speech bubble -->
+  <path d="M20 25C20 20.5817 23.5817 17 28 17H92C96.4183 17 100 20.5817 100 25V65C100 69.4183 96.4183 73 92 73H55L35 93V73H28C23.5817 73 20 69.4183 20 65V25Z" stroke="#2B6B7C" stroke-width="3" fill="none"/>
+  <!-- Question mark -->
+  <text x="60" y="55" text-anchor="middle" fill="#2B6B7C" font-size="36" font-weight="bold">?</text>
+  <!-- Lightbulb accent -->
+  <circle cx="95" cy="95" r="18" stroke="#FA8072" stroke-width="2.5" fill="none"/>
+  <path d="M95 85V83" stroke="#FA8072" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M89 100H101" stroke="#FA8072" stroke-width="2" stroke-linecap="round"/>
+  <path d="M91 103H99" stroke="#FA8072" stroke-width="2" stroke-linecap="round"/>
+  <path d="M88 91C88 87 91 85 95 85C99 85 102 87 102 91C102 94 99 96 97 97V100H93V97C91 96 88 94 88 91Z" fill="#FA8072" fill-opacity="0.3"/>
+</svg>

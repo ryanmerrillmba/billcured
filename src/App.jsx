@@ -1,11 +1,14 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import { Header, Footer } from './components'
-import { Home, About, FAQ, Resources, Product, Privacy, Terms, Blog, BlogPost, Success } from './pages'
+import { Home, About, FAQ, Resources, Product, Privacy, Terms, Blog, BlogPost, Success, FreeGuide } from './pages'
 
-function App() {
+function AppLayout() {
+  const location = useLocation()
+  const isLandingPage = location.pathname.startsWith('/lp/')
+
   return (
-    <BrowserRouter>
-      <Header />
+    <>
+      <Header minimal={isLandingPage} />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -18,9 +21,20 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/success" element={<Success />} />
+          <Route path="/free-guide" element={<FreeGuide />} />
+          <Route path="/lp/free-guide" element={<FreeGuide />} />
+          <Route path="/lp/blueprint" element={<Product />} />
         </Routes>
       </main>
-      <Footer />
+      {!isLandingPage && <Footer />}
+    </>
+  )
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppLayout />
     </BrowserRouter>
   )
 }

@@ -6,11 +6,15 @@
   z-index: 100;
 }
 
+.header--minimal .header-container {
+  justify-content: center;
+}
+
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 180px;
+  height: 100px;
 }
 
 .logo {
@@ -29,7 +33,7 @@
 }
 
 .logo-img {
-  height: 160px;
+  height: 80px;
   width: auto;
 }
 
@@ -37,7 +41,7 @@
   display: none;
   flex-direction: column;
   position: absolute;
-  top: 180px;
+  top: 100px;
   left: 0;
   right: 0;
   background-color: var(--color-bg-white);

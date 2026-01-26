@@ -1,0 +1,11 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Document outline -->
+  <path d="M25 19C25 16.7909 26.7909 15 29 15H71C73.2091 15 75 16.7909 75 19V76C75 78.2091 73.2091 80 71 80H29C26.7909 80 25 78.2091 25 76V19Z" stroke="#2B6B7C" stroke-width="3" fill="none"/>
+  <line x1="35" y1="30" x2="65" y2="30" stroke="#2B6B7C" stroke-width="2"/>
+  <line x1="35" y1="42" x2="55" y2="42" stroke="#2B6B7C" stroke-width="2"/>
+  <line x1="35" y1="66" x2="50" y2="66" stroke="#2B6B7C" stroke-width="2"/>
+  <!-- Puzzle piece (missing) -->
+  <path d="M70 45C70 45 75 45 80 45C80 40 85 38 90 40C95 42 95 48 90 50C85 52 80 50 80 45C80 50 80 60 80 65C75 65 65 65 65 65C65 70 63 75 58 75C53 75 51 70 51 65C51 60 55 58 60 60C65 62 65 55 65 50C65 50 70 50 70 45Z" stroke="#FA8072" stroke-width="2.5" stroke-dasharray="4 2" fill="none"/>
+  <!-- Question mark in gap -->
+  <text x="72" y="58" fill="#FA8072" font-size="16" font-weight="bold">?</text>
+</svg>

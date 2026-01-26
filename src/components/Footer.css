@@ -15,6 +15,12 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+  }
+}
+
 .footer-brand {
   max-width: 280px;
 }
@@ -26,9 +32,8 @@
 }
 
 .footer-logo-img {
-  height: 32px;
+  height: 53px;
   width: auto;
-  filter: brightness(0) invert(1);
 }
 
 .footer-tagline {
@@ -72,4 +77,52 @@
   color: var(--color-text-light);
   font-size: var(--font-size-sm);
   margin: 0;
+}
+
+/* Footer Newsletter */
+.footer-newsletter {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 1024px) {
+  .footer-newsletter {
+    grid-column: auto;
+  }
+}
+
+.footer-newsletter h4 {
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-4);
+}
+
+.footer-newsletter-text {
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--space-4);
+}
+
+.footer-newsletter .email-signup__input {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--color-text-inverse);
+}
+
+.footer-newsletter .email-signup__input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-newsletter .email-signup__input:focus {
+  border-color: var(--color-cta);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.footer-newsletter .email-signup--success {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-newsletter .email-signup__success p {
+  color: var(--color-text-inverse);
 }

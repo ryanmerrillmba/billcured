@@ -11,15 +11,12 @@ function Home() {
   return (
     <>
       <Hero
-        headline="Cut Your Medical Bills by 30-70% in a Single Phone Call"
-        subheadline="Get the exact scripts, templates, and strategies used to negotiate thousands of dollars off hospital bills. No experience needed."
-        ctaText="Get the Blueprint - $49.99"
-        ctaLink="/product"
-        benefits={[
-          'Word-for-word negotiation scripts',
-          'Ready-to-use letter templates',
-          '60-day money-back guarantee'
-        ]}
+        headline="80% of Medical Bills Contain Errors"
+        subheadline="They're missing something very important. Get the free guide that reveals why—and how to use it to save thousands."
+        showEmailSignup={true}
+        emailSignupSource="homepage-hero"
+        image="/images/billing-blind-spot-mockup.svg"
+        secondaryCta={{ text: 'get the complete Blueprint', link: '/product' }}
       />
 
       {/* Social Proof Bar */}

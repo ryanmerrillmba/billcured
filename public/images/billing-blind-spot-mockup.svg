@@ -1,0 +1,35 @@
+<svg width="400" height="500" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shadow -->
+  <ellipse cx="200" cy="485" rx="150" ry="12" fill="rgba(0,0,0,0.1)"/>
+
+  <!-- Book spine (3D effect) -->
+  <path d="M40 30L60 50V450L40 470V30Z" fill="#1E5A6A"/>
+
+  <!-- Book cover -->
+  <rect x="60" y="50" width="300" height="400" rx="4" fill="#2B6B7C"/>
+
+  <!-- Cover design elements -->
+  <rect x="80" y="70" width="260" height="360" rx="2" fill="#F8FAFC" fill-opacity="0.1"/>
+
+  <!-- Title -->
+  <text x="210" y="160" text-anchor="middle" fill="white" font-family="system-ui, sans-serif" font-size="32" font-weight="bold">The Billing</text>
+  <text x="210" y="200" text-anchor="middle" fill="white" font-family="system-ui, sans-serif" font-size="32" font-weight="bold">Blind Spot</text>
+
+  <!-- Subtitle -->
+  <text x="210" y="260" text-anchor="middle" fill="#FA8072" font-family="system-ui, sans-serif" font-size="14">What Hospitals Don't Know</text>
+  <text x="210" y="280" text-anchor="middle" fill="#FA8072" font-family="system-ui, sans-serif" font-size="14">About Your Bill</text>
+
+  <!-- Decorative line -->
+  <rect x="130" y="310" width="160" height="2" fill="#FA8072"/>
+
+  <!-- Icon placeholder -->
+  <circle cx="210" cy="360" r="30" stroke="white" stroke-width="2" fill="none" stroke-opacity="0.5"/>
+  <text x="210" y="368" text-anchor="middle" fill="white" fill-opacity="0.7" font-size="24">$</text>
+
+  <!-- BillCured branding -->
+  <text x="210" y="420" text-anchor="middle" fill="white" fill-opacity="0.8" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">BILLCURED</text>
+
+  <!-- FREE badge -->
+  <rect x="280" y="60" width="70" height="28" rx="4" fill="#FA8072"/>
+  <text x="315" y="80" text-anchor="middle" fill="white" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">FREE</text>
+</svg>

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import EmailSignup from './EmailSignup'
 import './Footer.css'
 
 function Footer() {
@@ -9,7 +10,7 @@ function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <img src="/images/logo.png?v=2" alt="BillCured" className="footer-logo-img" />
+            <img src="/images/logo_inverted.png" alt="BillCured" className="footer-logo-img" />
             <p className="footer-tagline">
               Helping you fight back against unfair medical bills.
             </p>
@@ -39,6 +40,19 @@ function Footer() {
               <Link to="/privacy">Privacy Policy</Link>
               <Link to="/terms">Terms of Service</Link>
             </nav>
+          </div>
+
+          <div className="footer-newsletter">
+            <h4>Free Guide</h4>
+            <p className="footer-newsletter-text">
+              Get &quot;The Billing Blind Spot&quot; - our free guide to finding errors in your medical bills.
+            </p>
+            <EmailSignup
+              variant="compact"
+              buttonText="Get It Free"
+              source="footer"
+              showBenefits={false}
+            />
           </div>
         </div>
 

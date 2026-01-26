@@ -173,7 +173,7 @@
   border: 2px solid var(--color-primary);
   padding: var(--space-6);
   position: sticky;
-  top: calc(180px + var(--space-4));
+  top: calc(100px + var(--space-4));
 }
 
 .product-mockup {

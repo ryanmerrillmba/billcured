@@ -36,12 +36,12 @@
 .trust-badges img {
   max-width: 100%;
   height: auto;
-  max-height: 240px;
+  max-height: 80px;
 }
 
 @media (min-width: 768px) {
   .trust-badges img {
-    max-height: 300px;
+    max-height: 100px;
   }
 }
 
