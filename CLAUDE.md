@@ -25,6 +25,7 @@ npm run format     # Format code with Prettier
 - **Components:** `src/components/` with barrel export via `index.js`
 - **Pages:** `src/pages/` with barrel export via `index.js`
 - **Static data:** `src/data/` contains JSON files (faq, testimonials, features, blog-posts)
+- **Blog content:** 35 SEO-optimized posts in `src/data/blog-posts.json` covering negotiation, financial assistance, patient rights, and medical debt topics
 - **Stripe client:** `src/utils/stripe.js` handles checkout redirect
 
 ### Serverless Functions (Cloudflare Pages Functions)
