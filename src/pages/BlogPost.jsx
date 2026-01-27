@@ -1,7 +1,14 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
-import { CTASection, EmailSignup } from '../components'
+import { CTASection, EmailSignup, SEO, ArticleSchema, Breadcrumbs } from '../components'
 import blogPosts from '../data/blog-posts.json'
 import './BlogPost.css'
+
+// Helper to convert date string to ISO format
+function parseDate(dateStr) {
+  // e.g., "January 15, 2024" -> "2024-01-15"
+  const date = new Date(dateStr)
+  return date.toISOString().split('T')[0]
+}
 
 function BlogPost() {
   const { slug } = useParams()
@@ -16,11 +23,40 @@ function BlogPost() {
     .filter(p => p.category === post.category && p.slug !== post.slug)
     .slice(0, 2)
 
+  const canonicalUrl = `https://www.billcured.com/blog/${post.slug}`
+  const publishedDate = parseDate(post.date)
+
+  const breadcrumbs = [
+    { name: 'Home', path: '/' },
+    { name: 'Blog', path: '/blog' },
+    { name: post.title, path: `/blog/${post.slug}` },
+  ]
+
   return (
     <>
+      <SEO
+        title={post.title}
+        description={post.metaDescription || post.excerpt}
+        canonical={canonicalUrl}
+        ogType="article"
+        ogImage={post.image ? `https://www.billcured.com${post.image}` : undefined}
+        article={{
+          publishedTime: publishedDate,
+          author: 'BillCured Team',
+          section: post.category,
+        }}
+      />
+      <ArticleSchema
+        headline={post.title}
+        description={post.metaDescription || post.excerpt}
+        image={post.image ? `https://www.billcured.com${post.image}` : undefined}
+        datePublished={publishedDate}
+        url={canonicalUrl}
+      />
       <article className="blog-post">
         <header className="post-header">
           <div className="container">
+            <Breadcrumbs items={breadcrumbs} />
             <div className="post-meta">
               <Link to="/blog" className="back-link">&larr; Back to Blog</Link>
               <span className="post-category">{post.category}</span>

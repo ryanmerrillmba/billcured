@@ -1,9 +1,14 @@
-import { CTASection } from '../components'
+import { CTASection, SEO } from '../components'
 import './About.css'
 
 function About() {
   return (
     <>
+      <SEO
+        title="About BillCured"
+        description="BillCured started from a $47,000 hospital bill that became $11,000 through negotiation. Now we help thousands fight back against unfair medical bills."
+        canonical="https://www.billcured.com/about"
+      />
       <section className="section about-hero">
         <div className="container">
           <div className="about-hero-grid">

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { CTASection } from '../components'
+import { CTASection, SEO } from '../components'
 import './Resources.css'
 
 function Resources() {
@@ -83,6 +83,11 @@ function Resources() {
 
   return (
     <>
+      <SEO
+        title="Medical Bill Resources"
+        description="Free tools, organizations, and resources to help you navigate medical bills and healthcare costs. Find government programs, financial assistance, and know your rights."
+        canonical="https://www.billcured.com/resources"
+      />
       <section className="section resources-hero">
         <div className="container">
           <div className="resources-hero-content">

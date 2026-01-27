@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Hero, CTASection, FAQAccordion, TestimonialCard } from '../components'
+import { Hero, CTASection, FAQAccordion, TestimonialCard, SEO, OrganizationSchema, WebSiteSchema } from '../components'
 import faqData from '../data/faq.json'
 import featuresData from '../data/features.json'
 import testimonialsData from '../data/testimonials.json'
@@ -10,6 +10,13 @@ function Home() {
 
   return (
     <>
+      <SEO
+        title="Medical Bill Negotiation Guide"
+        description="Cut your medical bills by 30-70% with proven negotiation scripts and templates. 80% of medical bills contain errors. Get the free guide that reveals how to save thousands."
+        canonical="https://www.billcured.com/"
+      />
+      <OrganizationSchema />
+      <WebSiteSchema />
       <Hero
         headline="80% of Medical Bills Contain Errors"
         subheadline="They're missing something very important. Get the free guide that reveals why—and how to use it to save thousands."

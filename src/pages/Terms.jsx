@@ -1,8 +1,16 @@
+import { SEO } from '../components'
 import './Legal.css'
 
 function Terms() {
   return (
-    <div className="legal-page">
+    <>
+      <SEO
+        title="Terms of Service"
+        description="BillCured's terms of service govern your use of our website and digital products. Read our terms, refund policy, and intellectual property guidelines."
+        canonical="https://www.billcured.com/terms"
+        noindex={true}
+      />
+      <div className="legal-page">
       <div className="container">
         <h1>Terms of Service</h1>
         <p className="legal-updated">Last updated: January 2024</p>
@@ -137,7 +145,8 @@ function Terms() {
           </p>
         </section>
       </div>
-    </div>
+      </div>
+    </>
   )
 }
 

@@ -1,10 +1,16 @@
-import { CTASection, FAQAccordion } from '../components'
+import { CTASection, FAQAccordion, SEO, FAQPageSchema } from '../components'
 import faqData from '../data/faq.json'
 import './FAQ.css'
 
 function FAQ() {
   return (
     <>
+      <SEO
+        title="Medical Bill Negotiation FAQ"
+        description="Get answers to common questions about negotiating medical bills. Learn if you can negotiate, how much you can save, and what strategies work best."
+        canonical="https://www.billcured.com/faq"
+      />
+      <FAQPageSchema faqs={faqData} />
       <section className="section faq-hero">
         <div className="container">
           <div className="faq-hero-content">

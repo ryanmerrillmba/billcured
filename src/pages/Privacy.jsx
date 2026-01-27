@@ -1,8 +1,16 @@
+import { SEO } from '../components'
 import './Legal.css'
 
 function Privacy() {
   return (
-    <div className="legal-page">
+    <>
+      <SEO
+        title="Privacy Policy"
+        description="BillCured's privacy policy explains how we collect, use, and protect your personal information when you visit our website or purchase our products."
+        canonical="https://www.billcured.com/privacy"
+        noindex={true}
+      />
+      <div className="legal-page">
       <div className="container">
         <h1>Privacy Policy</h1>
         <p className="legal-updated">Last updated: January 2024</p>
@@ -113,7 +121,8 @@ function Privacy() {
           </p>
         </section>
       </div>
-    </div>
+      </div>
+    </>
   )
 }
 

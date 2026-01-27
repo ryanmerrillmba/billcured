@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { EmailSignup, TestimonialCard } from '../components'
+import { EmailSignup, TestimonialCard, SEO } from '../components'
 import testimonialsData from '../data/testimonials.json'
 import './FreeGuide.css'
 
@@ -9,6 +9,11 @@ function FreeGuide() {
 
   return (
     <>
+      <SEO
+        title="Free Medical Bill Guide"
+        description="80% of medical bills contain errors. Get the free guide that reveals the 'Billing Blind Spot' and learn how to use it to save thousands on your medical bills."
+        canonical="https://www.billcured.com/free-guide"
+      />
       {/* Hero Section */}
       <section className="free-guide-hero">
         <div className="container">

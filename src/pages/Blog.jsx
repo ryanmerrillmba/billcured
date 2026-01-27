@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BlogCard, CTASection } from '../components'
+import { BlogCard, CTASection, SEO } from '../components'
 import blogPosts from '../data/blog-posts.json'
 import './Blog.css'
 
@@ -16,6 +16,11 @@ function Blog() {
 
   return (
     <>
+      <SEO
+        title="Medical Bill Tips & Guides"
+        description="Expert guides, negotiation strategies, and tips to help you understand and reduce your medical bills. Learn how to fight back against unfair healthcare costs."
+        canonical="https://www.billcured.com/blog"
+      />
       <section className="section blog-hero">
         <div className="container">
           <div className="blog-hero-content">

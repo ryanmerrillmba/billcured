@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FAQAccordion, TestimonialCard } from '../components'
+import { FAQAccordion, TestimonialCard, SEO, ProductSchema, Breadcrumbs } from '../components'
 import { redirectToCheckout, PRODUCTS } from '../utils/stripe'
 import testimonialsData from '../data/testimonials.json'
 import './Product.css'
@@ -38,8 +38,19 @@ function Product() {
     await redirectToCheckout(priceIds)
   }
 
+  const breadcrumbs = [
+    { name: 'Home', path: '/' },
+    { name: 'Bill Cured Blueprint', path: '/product' },
+  ]
+
   return (
     <>
+      <SEO
+        title="Bill Cured Blueprint - Medical Bill Negotiation Guide"
+        description="Get the complete system to negotiate your medical bills down by 30-70%. Word-for-word scripts, letter templates, and step-by-step action plans. $49.99 with 60-day money-back guarantee."
+        canonical="https://www.billcured.com/product"
+      />
+      <ProductSchema />
       {/* Hero Section */}
       <section className="product-hero">
         <div className="container">
