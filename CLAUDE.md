@@ -41,6 +41,18 @@ npm run format     # Format code with Prettier
 - **Blog CTA:** Email signup embedded in blog posts
 - **Newsletter:** Beehiiv at `newsletter.billcured.com`
 
+### SEO (Search Engine Optimization)
+- **SEO component:** `src/components/SEO.jsx` - Dynamic meta tags via react-helmet-async
+- **StructuredData:** `src/components/StructuredData.jsx` - JSON-LD schemas
+  - OrganizationSchema (all pages)
+  - ProductSchema (Product page)
+  - FAQPageSchema (FAQ page)
+  - ArticleSchema (Blog posts)
+  - BreadcrumbSchema (inner pages)
+  - WebSiteSchema (homepage)
+- **Breadcrumbs:** `src/components/Breadcrumbs.jsx` - Visual + schema breadcrumbs
+- **Static files:** `public/robots.txt`, `public/sitemap.xml`
+
 ### Environment Variables
 Frontend (VITE_ prefix, exposed to browser):
 - `VITE_STRIPE_PUBLISHABLE_KEY`
