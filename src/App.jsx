@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
-import { Header, Footer } from './components'
+import { Header, Footer, ScrollToTop } from './components'
 import { Home, About, FAQ, Resources, Product, Privacy, Terms, Blog, BlogPost, Success, FreeGuide } from './pages'
 
 function AppLayout() {
@@ -8,6 +8,7 @@ function AppLayout() {
 
   return (
     <>
+      <ScrollToTop />
       <Header minimal={isLandingPage} />
       <main>
         <Routes>

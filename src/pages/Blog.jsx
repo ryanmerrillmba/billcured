@@ -9,10 +9,15 @@ function Blog() {
   // Get unique categories
   const categories = ['All', ...new Set(blogPosts.map(post => post.category))]
 
+  // Sort posts by date (newest first)
+  const sortedPosts = [...blogPosts].sort((a, b) => {
+    return new Date(b.date) - new Date(a.date)
+  })
+
   // Filter posts by category
   const filteredPosts = selectedCategory === 'All'
-    ? blogPosts
-    : blogPosts.filter(post => post.category === selectedCategory)
+    ? sortedPosts
+    : sortedPosts.filter(post => post.category === selectedCategory)
 
   return (
     <>
