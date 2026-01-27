@@ -46,7 +46,7 @@ function FAQ() {
       <CTASection
         headline="Ready to Start Saving?"
         subheadline="Get the Blueprint and start negotiating your medical bills today."
-        ctaText="Get the Blueprint - $50"
+        ctaText="Get the Blueprint - $49.99"
       />
     </>
   )

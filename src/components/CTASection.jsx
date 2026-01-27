@@ -4,7 +4,7 @@ import './CTASection.css'
 function CTASection({
   headline = "Ready to Fight Your Medical Bills?",
   subheadline = "Get the exact scripts and templates you need.",
-  ctaText = "Get the Blueprint - $50",
+  ctaText = "Get the Blueprint - $49.99",
   ctaLink = "/product",
   variant = "default"
 }) {

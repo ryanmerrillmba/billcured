@@ -75,7 +75,7 @@ function Blog() {
       <CTASection
         headline="Want the Complete System?"
         subheadline="Get all our scripts, templates, and strategies in one comprehensive guide."
-        ctaText="Get the Blueprint - $50"
+        ctaText="Get the Blueprint - $49.99"
       />
     </>
   )

@@ -136,7 +136,7 @@ function Resources() {
               all in one place.
             </p>
             <Link to="/product" className="btn btn-primary btn-large">
-              Get the Blueprint - $50
+              Get the Blueprint - $49.99
             </Link>
           </div>
         </div>
@@ -146,7 +146,7 @@ function Resources() {
         variant="dark"
         headline="Need More Than Resources?"
         subheadline="Get the complete system for negotiating your medical bills."
-        ctaText="Get the Blueprint - $50"
+        ctaText="Get the Blueprint - $49.99"
       />
     </>
   )
