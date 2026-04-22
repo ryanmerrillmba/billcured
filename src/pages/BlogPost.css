@@ -52,6 +52,12 @@
 .post-date {
   color: var(--color-text-light);
   margin: 0;
+  font-size: var(--font-size-sm);
+}
+
+.post-updated {
+  color: var(--color-text-light);
+  opacity: 0.8;
 }
 
 /* Post Content */

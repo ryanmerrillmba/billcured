@@ -25,6 +25,7 @@ function BlogPost() {
 
   const canonicalUrl = `https://www.billcured.com/blog/${post.slug}`
   const publishedDate = parseDate(post.date)
+  const modifiedDate = post.lastUpdated ? parseDate(post.lastUpdated) : publishedDate
 
   const breadcrumbs = [
     { name: 'Home', path: '/' },
@@ -51,6 +52,7 @@ function BlogPost() {
         description={post.metaDescription || post.excerpt}
         image={post.image ? `https://www.billcured.com${post.image}` : undefined}
         datePublished={publishedDate}
+        dateModified={modifiedDate}
         url={canonicalUrl}
       />
       <article className="blog-post">
@@ -62,7 +64,12 @@ function BlogPost() {
               <span className="post-category">{post.category}</span>
             </div>
             <h1>{post.title}</h1>
-            <p className="post-date">{post.date}</p>
+            <p className="post-date">
+              Published {post.date}
+              {post.lastUpdated && (
+                <span className="post-updated"> · Updated {post.lastUpdated}</span>
+              )}
+            </p>
           </div>
         </header>
 
