@@ -81,8 +81,47 @@ function BlogPost() {
                 if (block.type === 'heading') {
                   return <h2 key={index}>{block.text}</h2>
                 }
+                if (block.type === 'subheading') {
+                  return <h3 key={index}>{block.text}</h3>
+                }
                 if (block.type === 'paragraph') {
                   return <p key={index}>{block.text}</p>
+                }
+                if (block.type === 'list') {
+                  return (
+                    <ul key={index}>
+                      {block.items.map((item, i) => <li key={i}>{item}</li>)}
+                    </ul>
+                  )
+                }
+                if (block.type === 'ordered-list') {
+                  return (
+                    <ol key={index}>
+                      {block.items.map((item, i) => <li key={i}>{item}</li>)}
+                    </ol>
+                  )
+                }
+                if (block.type === 'callout') {
+                  return (
+                    <div key={index} className="post-callout">
+                      {block.title && <strong>{block.title}</strong>}
+                      <p>{block.text}</p>
+                    </div>
+                  )
+                }
+                if (block.type === 'related-links') {
+                  return (
+                    <div key={index} className="post-related-links">
+                      <span className="related-links-label">Related:</span>
+                      <ul>
+                        {block.links.map((link, i) => (
+                          <li key={i}>
+                            <Link to={`/blog/${link.slug}`}>{link.text}</Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )
                 }
                 return null
               })}
