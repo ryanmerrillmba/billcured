@@ -1,24 +1,33 @@
+import { useState, useEffect } from 'react'
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { CTASection, EmailSignup, SEO, ArticleSchema, Breadcrumbs } from '../components'
-import blogPosts from '../data/blog-posts.json'
 import './BlogPost.css'
 
-// Helper to convert date string to ISO format
 function parseDate(dateStr) {
-  // e.g., "January 15, 2024" -> "2024-01-15"
   const date = new Date(dateStr)
   return date.toISOString().split('T')[0]
 }
 
 function BlogPost() {
   const { slug } = useParams()
+  const [blogPosts, setBlogPosts] = useState(null)
+
+  useEffect(() => {
+    fetch('/data/blog-posts.json')
+      .then(res => res.json())
+      .then(data => setBlogPosts(data))
+  }, [])
+
+  if (blogPosts === null) {
+    return <div className="blog-loading">Loading...</div>
+  }
+
   const post = blogPosts.find(p => p.slug === slug)
 
   if (!post) {
     return <Navigate to="/blog" replace />
   }
 
-  // Get related posts (same category, excluding current)
   const relatedPosts = blogPosts
     .filter(p => p.category === post.category && p.slug !== post.slug)
     .slice(0, 2)
@@ -133,7 +142,6 @@ function BlogPost() {
                 return null
               })}
 
-              {/* Email Signup CTA */}
               <div className="post-email-signup">
                 <EmailSignup
                   headline="Get the Free Guide"
@@ -143,7 +151,6 @@ function BlogPost() {
                 />
               </div>
 
-              {/* CTA Box */}
               <div className="post-cta-box">
                 <h3>Want the Complete System?</h3>
                 <p>
@@ -160,7 +167,6 @@ function BlogPost() {
         </div>
       </article>
 
-      {/* Related Posts */}
       {relatedPosts.length > 0 && (
         <section className="section related-posts">
           <div className="container">

@@ -1,20 +1,27 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { BlogCard, CTASection, SEO } from '../components'
-import blogPosts from '../data/blog-posts.json'
 import './Blog.css'
 
 function Blog() {
+  const [blogPosts, setBlogPosts] = useState([])
+  const [loading, setLoading] = useState(true)
   const [selectedCategory, setSelectedCategory] = useState('All')
 
-  // Get unique categories
+  useEffect(() => {
+    fetch('/data/blog-posts.json')
+      .then(res => res.json())
+      .then(data => {
+        setBlogPosts(data)
+        setLoading(false)
+      })
+  }, [])
+
   const categories = ['All', ...new Set(blogPosts.map(post => post.category))]
 
-  // Sort posts by date (newest first)
   const sortedPosts = [...blogPosts].sort((a, b) => {
     return new Date(b.date) - new Date(a.date)
   })
 
-  // Filter posts by category
   const filteredPosts = selectedCategory === 'All'
     ? sortedPosts
     : sortedPosts.filter(post => post.category === selectedCategory)
@@ -39,35 +46,39 @@ function Blog() {
 
       <section className="section blog-main">
         <div className="container">
-          {/* Category Filter */}
-          <div className="blog-filter">
-            {categories.map(category => (
-              <button
-                key={category}
-                className={`filter-btn ${selectedCategory === category ? 'active' : ''}`}
-                onClick={() => setSelectedCategory(category)}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
+          {loading ? (
+            <div className="blog-loading">Loading posts...</div>
+          ) : (
+            <>
+              <div className="blog-filter">
+                {categories.map(category => (
+                  <button
+                    key={category}
+                    className={`filter-btn ${selectedCategory === category ? 'active' : ''}`}
+                    onClick={() => setSelectedCategory(category)}
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
 
-          {/* Blog Grid */}
-          <div className="blog-grid">
-            {filteredPosts.map(post => (
-              <BlogCard
-                key={post.slug}
-                slug={post.slug}
-                title={post.title}
-                excerpt={post.excerpt}
-                date={post.date}
-                category={post.category}
-              />
-            ))}
-          </div>
+              <div className="blog-grid">
+                {filteredPosts.map(post => (
+                  <BlogCard
+                    key={post.slug}
+                    slug={post.slug}
+                    title={post.title}
+                    excerpt={post.excerpt}
+                    date={post.date}
+                    category={post.category}
+                  />
+                ))}
+              </div>
 
-          {filteredPosts.length === 0 && (
-            <p className="no-posts">No posts found in this category.</p>
+              {filteredPosts.length === 0 && (
+                <p className="no-posts">No posts found in this category.</p>
+              )}
+            </>
           )}
         </div>
       </section>
