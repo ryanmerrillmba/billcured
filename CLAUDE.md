@@ -90,6 +90,24 @@ Server-side (Cloudflare Pages secrets, accessed via `context.env`):
 - `BEEHIIV_API_KEY`
 - `BEEHIIV_PUBLICATION_ID`
 
+## Content Workflow (Slash Commands & Agents)
+
+`.claude/commands/` contains slash commands for the blog/SEO content pipeline. Key commands:
+
+- `/write [topic]` — Writes 2,000–3,000+ word SEO blog post → saves to `drafts/[slug]-[date].md`, auto-scrubs AI watermarks, then runs optimization agents
+- `/research [topic]` — SERP + gap research before writing
+- `/publish-draft [file]` — Converts draft markdown to blog-posts.json block format and updates sitemap
+- `/optimize [slug]` — Re-optimizes an existing published post
+- `/scrub [file]` — Removes AI watermark patterns (Unicode zero-width spaces, em-dash overuse)
+- `/performance-review` — Audits post performance
+
+`.claude/agents/` contains specialized sub-agents called automatically by `/write`:
+`content-analyzer`, `seo-optimizer`, `meta-creator`, `internal-linker`, `keyword-mapper`
+
+**Draft lifecycle:** `/write` → `drafts/[slug].md` → `/publish-draft` → `public/data/blog-posts.json` + `public/sitemap.xml`
+
+`drafts/` also contains historical JSON batch files (`posts-*.json`) from earlier bulk imports.
+
 ## Code Style
 
 - No semicolons, single quotes, 2-space indent, trailing commas (es5)
@@ -99,3 +117,5 @@ Server-side (Cloudflare Pages secrets, accessed via `context.env`):
 ## Design Reference
 
 `stitch.md` is the authoritative design spec (color palette, typography, spacing, component specs, copy rules). Key constraints: no red anywhere (audience is stressed), no countdown timers, specific dollar amounts over vague adjectives, calm authority tone.
+
+`photos.md` catalogs all visual assets and image style guidelines for finding/generating blog and site images.

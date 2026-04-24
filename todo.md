@@ -6,6 +6,9 @@
 
 - [x] **Submit sitemap.xml to Google Search Console** — sitemap updated with all 56 posts; submit at Search Console → Sitemaps → `https://www.billcured.com/sitemap.xml`
 - [x] **Reduce JS bundle size (857KB → 305KB)** — `blog-posts.json` moved to `public/data/` (fetched at runtime, never bundled); Blog + BlogPost pages lazy-loaded via `React.lazy()`
+- [x] **Remove duplicate Related sections from blog posts** — removed inline `related-links` renderer; kept bottom "Related Articles" section (proper semantic HTML, auto-curated by category)
+- [x] **Remove paid product CTAs from blog posts** — removed "Want the Complete System?" box and bottom CTASection; blog posts now only show "Get the Free Guide" EmailSignup
+- [ ] **Add missing images for 22 blog posts** — 22 posts have image fields in `blog-posts.json` pointing to files that don't exist in `public/images/`. Missing files: `blog_free_help.jpg`, `blog_negotiation_checklist.jpg`, `blog_bill_mistakes.jpg`, `blog_debt_validation.jpg`, `blog_negotiation_script.jpg`, `blog_nonprofit_hospital.jpg`, `blog_medicaid_spend.jpg`, `blog_hipaa_billing.jpg`, `blog_no_surprises.jpg`, `blog_billing_advocate.jpg`, `blog_bill_waived.jpg`, `blog_financial_counselor.jpg`, `blog_remove_collections.jpg`, `blog_collection_rights.jpg`, `blog_ignoring_bills.jpg`, `blog_urgent_care_er.jpg`, `blog_ambulance_bill.jpg`, `blog_insurance_complaint.jpg`, `blog_out_of_network.jpg`, `blog_prior_auth.jpg`, `blog_eob_guide.jpg`, `blog_insurance_denial.jpg`
 
 ---
 
@@ -13,12 +16,6 @@
 
 - [x] **Write 22 backdated blog posts** — all 22 posts written and published (Oct 2024–Mar 2026); site now has 56 total posts across 11 categories
 - [ ] **Build backlinks** — content is done, off-page authority is the next bottleneck for competitive keywords; even 5–10 quality links/month moves the needle. Targets: Patient Advocate Foundation, NeedyMeds, state insurance commissioner resource pages, HARO/Connectively healthcare queries
-
----
-
-## Priority 3 — Do Later (Monitoring / Ongoing)
-
-- [ ] **Monitor Search Console impressions** — check every 2–4 weeks once sitemap is submitted; identify which posts are gaining traction and double down on those topics
 
 ---
 

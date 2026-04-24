@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link, Navigate } from 'react-router-dom'
-import { CTASection, EmailSignup, SEO, ArticleSchema, Breadcrumbs } from '../components'
+import { EmailSignup, SEO, ArticleSchema, Breadcrumbs } from '../components'
 import './BlogPost.css'
 
 function parseDate(dateStr) {
@@ -125,20 +125,6 @@ function BlogPost() {
                     </div>
                   )
                 }
-                if (block.type === 'related-links') {
-                  return (
-                    <div key={index} className="post-related-links">
-                      <span className="related-links-label">Related:</span>
-                      <ul>
-                        {block.links.map((link, i) => (
-                          <li key={i}>
-                            <Link to={`/blog/${link.slug}`}>{link.text}</Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )
-                }
                 return null
               })}
 
@@ -151,17 +137,6 @@ function BlogPost() {
                 />
               </div>
 
-              <div className="post-cta-box">
-                <h3>Want the Complete System?</h3>
-                <p>
-                  This article covers the basics, but the Bill Cured Blueprint gives you
-                  everything: word-for-word scripts, ready-to-use templates, and step-by-step
-                  action plans.
-                </p>
-                <Link to="/product" className="btn btn-primary">
-                  Get the Blueprint - $49.99
-                </Link>
-              </div>
             </div>
           </div>
         </div>
@@ -184,12 +159,6 @@ function BlogPost() {
         </section>
       )}
 
-      <CTASection
-        variant="dark"
-        headline="Stop Struggling with Medical Bills"
-        subheadline="Get the proven system to negotiate your bills down by 30-70%."
-        ctaText="Get the Blueprint - $49.99"
-      />
     </>
   )
 }
